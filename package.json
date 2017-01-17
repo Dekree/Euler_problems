@@ -1,10 +1,12 @@
 {
-  "name": "Euler problems",
+  "name": "Euler_problems",
   "version": "0.1.0",
   "description": "My solves for Euler's problems using Javascript",
   "main": "site.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Andrey Viriyalov - aviriyalov@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.14.0"
+  }
 }

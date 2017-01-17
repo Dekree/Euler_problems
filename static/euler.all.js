@@ -79,7 +79,7 @@ function poly() {
 	for( var i = 999999; i > 100000; i-- ) {
 		i += '';
 		if( i[0] == i[5] && i[1] == i[4] && i[2] == i[3] ) {
-			for( var j = 100; j < 1000; j++ ) {				
+			for( var j = 100; j < 1000; j++ ) {
 				if( i % j == 0 ) {
 					var del = i / j;
 					console.log( i + ' / ' + j + ' = ' + (i / j) );
@@ -152,7 +152,7 @@ function prime() {
 			}
 			check = 0;
 		}
-		
+
 	}
 }
 //console.log( prime() );
@@ -229,7 +229,7 @@ function prime2() {
 			}
 			check = 0;
 		}
-		
+
 	}
 	return num;
 }
@@ -272,7 +272,7 @@ function large() {
 			    [ 1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52,  1, 89, 19, 67, 48] ];
 
 	for( var i = 0; i < arr.length; i++ ) {
-		for( var j = 0; j < arr.length - 3; j++ ) {			
+		for( var j = 0; j < arr.length - 3; j++ ) {
 			num = arr[i][j] * arr[i][j + 1] * arr[i][j + 2] * arr[i][j + 3];
 			//console.log( arr[i][j], arr[i][j + 1], arr[i][j + 2], arr[i][j + 3], ' = ' + num );
 			if( num >= max ) {
@@ -486,10 +486,10 @@ function collatz() {
 	var chain = 0;
 	var num, last;
 	var k, j;
-	for( var i = 999999; i > 13; i-- ) {		
+	for( var i = 999999; i > 13; i-- ) {
 		num = i;
 		k = 0;
-		j = 1;		
+		j = 1;
 		while( k == 0 ) {
 			if( num % 2 == 0 ) {
 				num /= 2;
@@ -502,7 +502,7 @@ function collatz() {
 			} else {
 				num = 3 * num + 1;
 			}
-			j++;			
+			j++;
 		}
 	}
 	return [chain, last];
@@ -526,7 +526,7 @@ function path() {
 		for( var k = 1; k < m; k++ ) {
 			arr[k][j] = arr[k - 1][j] + arr[k][j - 1];
 		}
-	}	
+	}
 	for(var p = 0; p < m; p++) {
 		document.write( arr[p] + '<br />' );
 	}
@@ -563,8 +563,8 @@ function words() {
 		num += arr[a].length;
 		for( var j = 0; j < 9; j++ ) {
 			num += ( arr[a].length + arr[j].length );
-		}		
-	}	
+		}
+	}
 	console.log( num );
 	for( var x = 0; x < 9; x++ ) {
 		num += ( arr[x].length + arr[27].length );
@@ -575,7 +575,7 @@ function words() {
 			num += arr[x].length + arr[27].length + arr[29].length + arr[b].length;
 			for( var c = 0; c < 9; c++ ) {
 				num += ( arr[x].length + arr[27].length + arr[29].length + arr[b].length + arr[c].length );
-			}		
+			}
 		}
 	}
 	console.log( num );
@@ -607,7 +607,7 @@ function piramid() {
 		for( var j = 0; j < arr[i].length; j++ ) {
 			arr[i][j] += Math.max( arr[i + 1][j], arr[i + 1][j + 1] );
 		}
-		
+
 	}
 	return arr[0][0];
 }
@@ -659,17 +659,17 @@ function friends() {
 	var sumA, sumB;
 	for( var i = 1; i <= 10000; i++ ) {
 		var first = i;
-		sumA = 0, sumB = 0;		
+		sumA = 0, sumB = 0;
 		for( var j = 1; j <= first / 2; j++ ) {
 			if( first % j == 0 ) {
-				sumA += ( j );				
+				sumA += ( j );
 			}
-		}		
+		}
 		for( var x = 1; x <= sumA / 2; x++ )  {
 			if( sumA % x == 0 ) {
 				sumB += ( x );
 			}
-		}		
+		}
 		if( first == sumB && sumA != sumB ) {
 			console.log( first + ' число 1' );
 			count++;
@@ -727,7 +727,7 @@ function abundantSum() {
 function wordChange() {
 	var count = 0;
 	var num;
-	for( var i = 2013456789; i <= 9876543210; i++ ) {		
+	for( var i = 2013456789; i <= 9876543210; i++ ) {
 		if( i < 1000000000 ) num = '0' + i;
 		else {
 			num = '' + i;
@@ -742,7 +742,7 @@ function wordChange() {
 				return num;
 			}
 		}
-		
+
 	}
 }
 //console.log( wordChange() );
@@ -788,7 +788,7 @@ function prime3() {
 			}
 			check = 0;
 		}
-		
+
 	}
 	return num;
 }
@@ -804,12 +804,12 @@ function fractions() {
 		if( chisla.indexOf(i) != -1 ) {
 			next = first.divide(i);
 			num = next + '';
-			//console.log( num );			
+			//console.log( num );
 			top:
 			for( var j = 3; j < num.length / 2 + 5; j++ ) {
 				period = num.substr(2, j);
 				period2 = num.substr((2 + j), j );
-				if( period == period2  ) {					
+				if( period == period2  ) {
 					if( j >= count ) {
 						count = j;
 						number = i;
@@ -817,7 +817,7 @@ function fractions() {
 						console.log( period );
 					}
 					break top;
-				}				
+				}
 			}
 			//document.write(total + '<br />' );
 		}
@@ -839,11 +839,11 @@ function spiral() {
 		x += 2 * i;
 		num += x;
 		for( var j = 1; j < 4; j++ ) {
-			x += 2 * i; 
+			x += 2 * i;
 			num += x;
 		}
 	}
-	return num;	
+	return num;
 }
 //console.log( spiral() );
 
@@ -861,7 +861,7 @@ function distinct() {
 			num += '';
 			if( arr.indexOf( num ) == -1 ) {
 				arr.push( num );
-			} 
+			}
 		}
 	}
 	return arr.length;
@@ -895,7 +895,7 @@ function money() {
 	var Pi = [1, 2, 5, 10, 20, 50, 100, 200];
 	var sum = 200;
 	var count = [];
-	var coin; 
+	var coin;
 	for( var i = 0; i < Pi.length; i++ ) {
 		count[i] = [];
 		count[i][0] = 1;
@@ -924,15 +924,15 @@ function panD() {
 	var count = 5000;
 	var num, newNum, num1, num2;
 	var total = [], sum;
-	for( var i = 1; i <= count; i++ ) {		
+	for( var i = 1; i <= count; i++ ) {
 		for( var j = 1; j <= count; j++ ) {
 			newNum = i * j;
 			num1 = i;
 			num2 = j;
 
 			num = '' + newNum + num1 + num2;
-			if( num.indexOf('1') != -1 && num.indexOf('2') != -1 && num.indexOf('3') != -1 && 
-				num.indexOf('4') != -1 && num.indexOf('5') != -1 &&	num.indexOf('6') != -1 && 
+			if( num.indexOf('1') != -1 && num.indexOf('2') != -1 && num.indexOf('3') != -1 &&
+				num.indexOf('4') != -1 && num.indexOf('5') != -1 &&	num.indexOf('6') != -1 &&
 				num.indexOf('7') != -1 && num.indexOf('8') != -1 &&	num.indexOf('9') != -1 &&
 				num.length <= 9 ) {
 				console.log( num1 + ' * ' + num2 + ' = ' + newNum );
@@ -944,9 +944,9 @@ function panD() {
 				}
 				if( total.indexOf(newNum) == -1 ) {
 					total.push(newNum);
-				} 
+				}
 			}
-		}		
+		}
 	}
 	console.log( total );
 	return total.reduce( function(sum, current) {
@@ -961,7 +961,7 @@ function frac() {
 	var j, num1, num2, num3, num4, fr, fr2, chis1, chis2, ost1, ost2;
 	for( var i = 10; i < 99; i++ ) {
 		j = i + 1;
-		while( j < 100 ) {			
+		while( j < 100 ) {
 			num1 = i + '';
 			num2 = j + '';
 			num3 = i;
@@ -970,8 +970,8 @@ function frac() {
 			for( var x = 1; x <= i; x++ ) {
 				if( num3 % x == 0 && num4 % x == 0 ) {
 					chis1 = num3 / x;
-					chis2 = num4 / x;					
-					fr2 = chis1 + '/' + chis2;					
+					chis2 = num4 / x;
+					fr2 = chis1 + '/' + chis2;
 					if( num1.indexOf( chis1 + '' ) != -1 && num2.indexOf( chis2 + '' ) != -1 ) {
 						var regexp1 = chis1 + '';
 						var regexp2 = chis2 + '';
@@ -984,15 +984,15 @@ function frac() {
 								console.log( fr + ' = ' + fr2 + ' в точку' );
 							}
 						}
-						
+
 					} /*else {
 						console.log( fr + ' = ' + fr2 + ' мимо' );
 					}*/
-				}				
+				}
 			}
 
 			j++;
-		}		
+		}
 	}
 	return 'the end';
 }
@@ -1003,7 +1003,7 @@ function frac() {
 function factorial(n) {
 	var fak = 1;
 	for( var i = 1; i <= n; i++ ) {
-		fak *= i; 
+		fak *= i;
 	}
 	return fak;
 }
@@ -1018,7 +1018,7 @@ function factDigit() {
 			if( sum == num ) {
 				total += sum;
 				console.log( sum + ' и ' + num );
-			} 
+			}
 		}
 		sum = 0;
 	}
@@ -1047,7 +1047,7 @@ function primes() {
 				check = 0;
 			}
 			check = 0;
-		}		
+		}
 	}
 	return num;
 }
@@ -1074,8 +1074,78 @@ function circlePrime() {
 
 ///////////////////////////////////////////////////////////problem 36
 
+var findAllPrimes = function(n) {
+	var range = [];
+	var primes = [];
+	var p = 2;
 
+	for( var i = 0; i <= n; i += 1 ) {
+		range.push({removed: false, number: i});
+	}
 
+	while( p * p <= n ) {
+		removeNumbersFrom(range, p, n);
+
+		for( var j = 0; j < range.length; j += 1 ) {
+			if( range[ j ].number > p ) {
+				p = range[ j ].number;
+				break;
+			}
+		}
+	}
+
+	for( var k = 0; k < range.length; k += 1 ) {
+		if( !range[ k ].removed ) {
+			primes.push( range[ k ].number );
+		}
+	}
+
+	primes.shift(); // remove 0 from primes
+	primes.shift(); // remove 1 from primes
+
+	return primes;
+};
+
+var removeNumbersFrom = function(range, p, n) {
+	for( var i = 2; i * p <= n; i += 1 ) {
+		range[i * p].removed = true;
+	}
+};
+
+var checkTruncatableOfPrime = function(prime, primesArr) {
+	var result = true;
+	for( var i = 1, ii = prime.length; i < ii; i += 1 ) {
+		if( primesArr.indexOf( +prime.slice( i ) ) === -1 || primesArr.indexOf( +prime.slice( 0, -(i) ) ) === -1 ) {
+			result = false;
+			break;
+		}
+	}
+	return result;
+};
+
+var findTruncatable = function() {
+	var primes = findAllPrimes( 1000000 );
+	var trunc = [];
+	var sum = 0;
+
+	for( var i = 0; i < primes.length; i += 1 ) {
+		if( checkTruncatableOfPrime( primes[ i ] + '', primes ) ) {
+			trunc.push( primes[ i ] );
+		}
+	}
+	for( var j = 0; j < trunc.length; j += 1 ) {
+		if( trunc[ j ] > 10 ) {
+			sum += trunc[ j ];
+		}
+	}
+
+	return sum;
+};
+
+var startTime = Date.now();
+console.log( findTruncatable() );
+// console.log( findAllPrimes( 10000000 ) );
+console.log( (Date.now() - startTime) / 1000 );
 
 ///////////////////////////////////////////////////////////problem 37
 
@@ -1244,7 +1314,7 @@ function piramid2() {
 	for( var i = piramid.length - 2; i >= 0; i-- ) {
 		for( var j = 0; j < piramid[i].length; j++ ) {
 			piramid[i][j] += Math.max( piramid[i + 1][j], piramid[i + 1][j + 1] );
-		}		
+		}
 	}
 	return piramid[0][0];
 }
